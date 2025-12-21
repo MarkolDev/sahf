@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слушать сказку | Самолётик и его друзья</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-plane"></i> Самолётик и друзья</h1>
+                <p class="subtitle">Новогодние приключения</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="audio.html" class="nav-link active"><i class="fas fa-headphones"></i> Слушать</a></li>
+                    <li><a href="read.html" class="nav-link"><i class="fas fa-book-open"></i> Читать</a></li>
+                    <li><a href="personaji.html" class="nav-link"><i class="fas fa-users"></i> Персонажи</a></li>
+                    <li><a href="claimbook.html" class="nav-link"><i class="fas fa-gift"></i> Получить книгу</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="audio-page">
+        <div class="container">
+            <h2 class="section-title">Слушайте сказку</h2>
+            <p class="section-subtitle">Устройтесь поудобнее и погрузитесь в мир новогодних приключений</p>
+            
+            <div class="audio-player">
+                <div class="audio-cover">
+                    <img src="cover.png" alt="Обложка аудиосказки" onerror="this.src='https://via.placeholder.com/300x300/FF9800/ffffff?text=Обложка'">
+                </div>
+                <div class="audio-controls">
+                    <h3>Самолётик и его друзья. Новогодние приключения</h3>
+                    <p class="audio-duration">Длительность: ~15 минут</p>
+                    
+                    <div class="player">
+                        <audio id="audioElement" src="samolĕtik_i_ego_druzi͡a.mp3"></audio>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span>
+                            <span id="totalTime">0:00</span>
+                        </div>
+                        <div class="controls">
+                            <button class="control-btn" id="playBtn">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="control-btn" id="pauseBtn">
+                                <i class="fas fa-pause"></i>
+                            </button>
+                            <button class="control-btn" id="restartBtn">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                            <div class="volume">
+                                <i class="fas fa-volume-up"></i>
+                                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.8">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="samolĕtik_i_ego_druzi͡a.mp3" class="btn btn-yellow" download>
+                        <i class="fas fa-download"></i> Скачать аудио
+                    </a>
+                </div>
+            </div>
+            
+            <div class="audio-description">
+                <h3>О сказке</h3>
+                <p>Весёлая история о том, как Самолётик и его друзья готовятся к Новому году, ищут ёлочные игрушки в лесу и встречают новых друзей. Идеально для детей 3-8 лет.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 «Самолётик и его друзья. Новогодние приключения».</p>
+            <p class="footer-text">Дата написания: 5.12.25 | Выход: 18.12.25</p>
+            <div class="social-links">
+                <a href="https://t.me/samoletikandhefriendsbookbot" class="social-link" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://chat.whatsapp.com/GXehlDeSoKoFTVKoAof7sA" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="audio.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

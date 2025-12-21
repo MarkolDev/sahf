@@ -1,0 +1,361 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    background: #fffef7;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    padding: 15px 0;
+    border-bottom: 3px solid #FF9800;
+    box-shadow: 0 5px 15px rgba(255, 152, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 2px;
+    font-weight: 700;
+}
+
+.logo .subtitle {
+    font-size: 0.9rem;
+    color: #FF9800;
+    font-weight: 600;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #FF9800;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Общие секции */
+.section-title {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #FF9800;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #FFB74D;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 152, 0, 0.3);
+}
+
+.btn-secondary {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #66BB6A;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+}
+
+.btn-yellow {
+    background: #FFEB3B;
+    color: #333;
+}
+
+.btn-yellow:hover {
+    background: #FFF176;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 235, 59, 0.3);
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Подвал */
+.footer {
+    background: #4CAF50;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-text {
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #FF9800;
+    transform: translateY(-5px) rotate(5deg);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        width: 220px;
+        box-shadow: 0 15px 30px rgba(255, 152, 0, 0.2);
+        border: 3px solid #FF9800;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+/* Стили для страницы аудио */
+.audio-page {
+    padding: 60px 0;
+}
+
+.audio-player {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(255, 152, 0, 0.1);
+    border: 3px solid #FFEB3B;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.audio-cover img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 5px solid #4CAF50;
+}
+
+.audio-controls {
+    flex: 1;
+    min-width: 300px;
+}
+
+.audio-controls h3 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.8rem;
+    color: #FF9800;
+    margin-bottom: 10px;
+}
+
+.audio-duration {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.player {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    height: 8px;
+    background: #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    background: #4CAF50;
+    border-radius: 4px;
+    width: 0%;
+}
+
+.time-display {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #FF9800;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background: #FFB74D;
+    transform: scale(1.1);
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    color: #666;
+}
+
+.volume input {
+    width: 100px;
+}
+
+.audio-description {
+    background: #FFF9C4;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #FF9800;
+}
+
+.audio-description h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-family: 'Comic Neue', cursive;
+}

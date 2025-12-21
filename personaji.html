@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи | Самолётик и его друзья</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .characters-page {
+            padding: 60px 0;
+        }
+        
+        .characters-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .character-card-full {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(255, 152, 0, 0.15);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .character-card-full:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #FF9800;
+            box-shadow: 0 20px 40px rgba(255, 152, 0, 0.25);
+        }
+        
+        .character-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .character-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .character-card-full:hover .character-image img {
+            transform: scale(1.1);
+        }
+        
+        .character-info {
+            padding: 25px;
+        }
+        
+        .character-name-full {
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.8rem;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        
+        .character-role {
+            color: #FF9800;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .character-description-full {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .character-details {
+            background: #FFF9C4;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #FF9800;
+        }
+        
+        .character-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .character-details li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .character-details li i {
+            color: #4CAF50;
+            margin-right: 8px;
+            width: 20px;
+        }
+        
+        .character-quote {
+            font-style: italic;
+            color: #FF9800;
+            margin-top: 15px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-plane"></i> Самолётик и друзья</h1>
+                <p class="subtitle">Новогодние приключения</p>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="audio.html" class="nav-link"><i class="fas fa-headphones"></i> Слушать</a></li>
+                    <li><a href="read.html" class="nav-link"><i class="fas fa-book-open"></i> Читать</a></li>
+                    <li><a href="personaji.html" class="nav-link active"><i class="fas fa-users"></i> Персонажи</a></li>
+                    <li><a href="claimbook.html" class="nav-link"><i class="fas fa-gift"></i> Получить книгу</a></li>
+                </ul>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="characters-page">
+        <div class="container">
+            <h2 class="section-title">Наши герои</h2>
+            <p class="section-subtitle">Познакомьтесь поближе с каждым участником новогоднего приключения</p>
+            
+            <div class="characters-grid-full">
+                <!-- Луна -->
+                <div class="character-card-full">
+                    <div class="character-image">
+                        <img src="luna.jpg" alt="Луна-пантера" onerror="this.src='https://via.placeholder.com/400x250/9C27B0/ffffff?text=Луна'">
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name-full">Луна</h3>
+                        <span class="character-role">Чёрная пантера с серебристыми пятнами</span>
+                        <p class="character-description-full">Самая мудрая и спокойная в компании. Всегда знает, что делать в сложной ситуации. Обожает звёздное небо и зимние ночи.</p>
+                        
+                        <div class="character-details">
+                            <ul>
+                                <li><i class="fas fa-paw"></i> <strong>Вид:</strong> Пантера</li>
+                                <li><i class="fas fa-heart"></i> <strong>Характер:</strong> Спокойная, мудрая</li>
+                                <li><i class="fas fa-star"></i> <strong>Особенность:</strong> Серебристые пятна</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="character-quote">
+                            "В лесу, конечно же! А где ещё?"
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Лео -->
+                <div class="character-card-full">
+                    <div class="character-image">
+                        <img src="leo.jpg" alt="Лео-леопард" onerror="this.src='https://via.placeholder.com/400x250/FF9800/ffffff?text=Лео'">
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name-full">Лео</h3>
+                        <span class="character-role">Рыжий леопард с весёлым нравом</span>
+                        <p class="character-description-full">Энергичный и жизнерадостный. Обожает приключения и вкусняшки. Иногда бывает немного рассеянным, но всегда готов помочь друзьям.</p>
+                        
+                        <div class="character-details">
+                            <ul>
+                                <li><i class="fas fa-paw"></i> <strong>Вид:</strong> Леопард</li>
+                                <li><i class="fas fa-heart"></i> <strong>Характер:</strong> Весёлый, энергичный</li>
+                                <li><i class="fas fa-cookie-bite"></i> <strong>Любит:</strong> Вкусняшки</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="character-quote">
+                            "Давайте сходим туда в ОБЭЭТ, потому что там будут вкусняшки!"
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Самолётик -->
+                <div class="character-card-full">
+                    <div class="character-image">
+                        <img src="samoletik.jpg" alt="Самолётик" onerror="this.src='https://via.placeholder.com/400x250/2196F3/ffffff?text=Самолётик'">
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name-full">Самолётик</h3>
+                        <span class="character-role">Главный герой истории</span>
+                        <p class="character-description-full">Любопытный, смелый и находчивый. Всегда полон идей и готов возглавить любое приключение. Мечтает найти самые красивые ёлочные игрушки.</p>
+                        
+                        <div class="character-details">
+                            <ul>
+                                <li><i class="fas fa-plane"></i> <strong>Вид:</strong> Самолётик</li>
+                                <li><i class="fas fa-heart"></i> <strong>Характер:</strong> Смелый, любопытный</li>
+                                <li><i class="fas fa-bolt"></i> <strong>Особенность:</strong> Может летать</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="character-quote">
+                            "Пойдёмте, все шишки мыть!"
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Феликс -->
+                <div class="character-card-full">
+                    <div class="character-image">
+                        <img src="feliks.jpg" alt="Феликс-лев" onerror="this.src='https://via.placeholder.com/400x250/FFC107/000000?text=Феликс'">
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name-full">Феликс</h3>
+                        <span class="character-role">Большой добрый лев</span>
+                        <p class="character-description-full">Новый друг, который появился в лесу. Несмотря на внушительные размеры, очень добрый и хочет со всеми подружиться. Любит новогодние праздники.</p>
+                        
+                        <div class="character-details">
+                            <ul>
+                                <li><i class="fas fa-paw"></i> <strong>Вид:</strong> Лев</li>
+                                <li><i class="fas fa-heart"></i> <strong>Характер:</strong> Добрый, дружелюбный</li>
+                                <li><i class="fas fa-users"></i> <strong>Цель:</strong> Найти друзей</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="character-quote">
+                            "Меня зовут Феликс. Я не агрессивный. Я хочу с вами дружить!"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 «Самолётик и его друзья. Новогодние приключения».</p>
+            <p class="footer-text">Дата написания: 5.12.25 | Выход: 18.12.25</p>
+            <div class="social-links">
+                <a href="https://t.me/samoletikandhefriendsbookbot" class="social-link" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://chat.whatsapp.com/GXehlDeSoKoFTVKoAof7sA" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
